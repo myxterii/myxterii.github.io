@@ -8,6 +8,9 @@
   background-color: #392F5A;
   color: #ff8243;
   border: 2px solid black; /*ill add more here later */
+  height:auto;
+  min-width:500px;
+  min-height:500px;
   margin: 20px;
   padding: 20px;
 }
@@ -17,8 +20,37 @@
     font-weight: normal;
     font-style: normal;
 }
+
+.aboutme {
+  display: flex;
+  justify-content: flex-start;
+} /* this should align things to the left? */
+/* update. it did. but it aligns Everything. um...*/
+
+.icon {
+    min-height:150px;
+    min-width:150px;
+    border: 2px dashed;
+    margin: 15px;
+}
 p{
 font-family:Oceanside;
+}
+h1{font-size: 1.6em; 
+    font-weight: bold;
+    text-transform: uppercase; 
+    text-shadow: /* what this will do is basically give it a cool stroke*/
+        -2px -2px 0 #9717cd,  
+         2px -2px 0 #0c2420,
+        -2px  2px 0 #0c2420,
+         2px  2px 0 #0c2420,
+         0px  0px 0px rgba(0,0,0,0.6); 
+         /* ^im pretty sure this gives it a gradient. 
+         which i dont want. 
+         and ive tried to get rid of it 
+         but it breaks everything above. 
+         which i also dont want. 
+         so i guess its staying for now*/
 }
 body {
     background-color: black;
@@ -87,10 +119,18 @@ body {
 <!-- striped divider -->
  <div class="striped-divider"></div>
 
+ <div class="aboutme">
 <!-- (img) left hand side. to the right theres info-->
-<img src="images/tansytansy.png" alt="tansy icon">
+<div class="icon"><img src="images/tansytansy.png" alt="tansy icon"></div>
  <!-- striped divider-->
-	<p>welcome to my website<br>meow<br>i thought this would be a lot different. but its okay!<br>im going to do things with this eventually</p>
+	<h1>myxterii</h1><br>
+    <h2>aka mango</h2><br>
+    <p>hi. i like apples and bananas</p><br>
+    <p>more tba promise</p>
+
+</div>
+
+
   <div class="striped-divider"></div>
 	</div>
   
