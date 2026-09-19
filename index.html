@@ -7,9 +7,10 @@
 .main {
   background-color: #392F5A;
   color: #ff8243;
-  border: 2px solid black; /*ill add more here later */
+  border: 4px solid rgb(5, 0, 23); /*ill add more here later */
+  
   height:auto;
-  min-width:500px;
+  min-width:700px;
   min-height:500px;
   margin: 20px;
   padding: 20px;
@@ -21,29 +22,102 @@
     font-style: normal;
 }
 
-.aboutme {
+/* .aboutme {
   display: flex;
   justify-content: flex-start;
-} /* this should align things to the left? */
-/* update. it did. but it aligns Everything. um...*/
+} old about me section. i am
+  switching to grids..! */
 
-.icon {
-    min-height:150px;
-    min-width:150px;
+  .aboutme {
+display: grid;
+grid-template-areas:
+"icons names text links";
+grid-template-rows: auto 1fr;
+grid-template-columns: 1fr 2fr 0.5frfr;
+gap: 10px;
+height: auto;
+}
+.aboutme div {
+  padding: 10px;
+}
+.aboutme div.names {
+  grid-area: names;
+  text-align: left;
+}
+.aboutme div.icons {
+  grid-area: icons;
+  min-height:170px;
+    min-width:170px;
     border: 2px dashed;
     margin: 15px;
 }
+.aboutme div.text {
+  grid-area: text;
+}
+
+.wiki-quote-container { /* adapted from toyhouse code */
+    background-color: #231552; 
+    border-left: 4px solid #f06b04;
+    border-radius: 0px;
+    position: relative;
+    padding-top: 1.5rem;
+}
+
+.wiki-quote-text {
+    color: #f5ecd2; 
+    line-height: 1.6; 
+    font-size: 1.05rem;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.wiki-quote-text::before {
+    content: "❝ "; 
+    color: #f06b04;
+    font-size: 3rem; 
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 0;
+    vertical-align: -1.2rem;
+    margin-right: 0.2rem;
+    display: inline-block;
+}
+
+.wiki-quote-text::after {
+    content: " ❞"  ; 
+    color: #f06b04  ;
+    font-size: 3rem  ; 
+    font-family: 'Courier New', Courier, monospace  ;
+    font-weight: bold  ;
+    font-style: normal  ;
+    line-height: 0  ;
+    vertical-align: -1.9rem  ; 
+    margin-left: 0.2rem  ;
+    display: inline-block  ;
+}
+
+.wiki-quote-author {
+    color: #f06b04  ; 
+    font-size: 0.85rem  ;
+    font-weight: bold  ;
+    text-align: right  ;
+    margin-top: 0.5rem  ;
+    font-family: 'Courier New', Courier, monospace  ;
+}
+/* --- quote box end --- */
+
 p{
 font-family:Oceanside;
 }
 h1{font-size: 1.6em; 
     font-weight: bold;
-    text-transform: uppercase; 
     text-shadow: /* what this will do is basically give it a cool stroke*/
-        -2px -2px 0 #9717cd,  
-         2px -2px 0 #0c2420,
-        -2px  2px 0 #0c2420,
-         2px  2px 0 #0c2420,
+        -2px -2px 0 #07104a,  
+         2px -2px 0 #07104a,
+        -2px  2px 0 #07104a,
+         2px  2px 0 #07104a,
+
          0px  0px 0px rgba(0,0,0,0.6); 
          /* ^im pretty sure this gives it a gradient. 
          which i dont want. 
@@ -120,15 +194,22 @@ body {
  <div class="striped-divider"></div>
 
  <div class="aboutme">
-<!-- (img) left hand side. to the right theres info-->
-<div class="icon"><img src="images/tansytansy.png" alt="tansy icon"></div>
- <!-- striped divider-->
-	<h1>myxterii</h1><br>
-    <h2>aka mango</h2><br>
-    <p>hi. i like apples and bananas</p><br>
-    <p>more tba promise</p>
-
+  <div class="icons"><img src="images/icons/Untitled363_20260621192129.png" alt="tansytansy"></div>
+  <div class="names"><h1>myxterii</h1>also known as <em>mango</em><br><br>
+  
+<div class="wiki-quote-container">
+  <p class="wiki-quote-text">I like apples and bananas.</p>
+  <p class="wiki-quote-author"><href a="https://toyhou.se/~world/254891.knf2/page/192863.romeo-grace">- Romeo Grace, 7/31/26<a></p>
 </div>
+  </div>
+
+  <div class="text"><p>links</p><br>
+ 
+<img  src=""></img>
+  
+  </div>
+
+ </div>
 
 
   <div class="striped-divider"></div>
