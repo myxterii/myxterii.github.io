@@ -5,15 +5,27 @@
 
 <style>
 .main {
-  background-color: #392F5A;
+  background-image: linear-gradient(to bottom, #342958 10%, #392F5A 20%, #3b2e8c 70%);
   color: #ff8243;
-  border: 4px solid rgb(5, 0, 23); /*ill add more here later */
-  
+  border: 4px solid rgb(5, 0, 23);
+
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* this makes the gradient move with the viewer?!!!! not intended....but awesome....!!! 
+  the effect im going for seems to require javascript knowledge. hell no!!!!!*/
+
+  /* i had to put js in here for the buttons anyway. dude whatever*/
+
   height:auto;
   min-width:700px;
   min-height:500px;
   margin: 20px;
   padding: 20px;
+  opacity: 97%;
 }
 @font-face {
     font-family: 'Oceanside';
@@ -35,7 +47,8 @@ grid-template-areas:
 grid-template-rows: auto 1fr;
 grid-template-columns: 1fr 2fr 0.5frfr;
 gap: 10px;
-height: auto;
+height: auto; /* i dont know how these work. but it looks okay right now.
+so im not touching it. hope this doesnt cause any problems in the future*/
 }
 .aboutme div {
   padding: 10px;
@@ -46,10 +59,54 @@ height: auto;
 }
 .aboutme div.icons {
   grid-area: icons;
-  min-height:170px;
-    min-width:170px;
-    border: 2px dashed;
-    margin: 15px;
+  position: relative;
+    border: 4px double transparent;
+    border-image: linear-gradient(#02b2e8 0%,#03d8f9 15%,
+    #b5e765 30%, #f4d06f 60%,
+    #ff8243 80%,#f04f39 100%) 4; 
+ /* i only vaguely understand how these gradients work. they look good so far 
+ i'd like it to be like a box shadow on hover
+ just now discovering normal box shadows can only be one color. sigh
+ im goin gto try using "after" to fake a shadow*/
+  margin: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0px;
+  object-fit: fill;
+  object-position: center;
+}
+
+.aboutme div.icons:after{
+content: "";
+position: absolute;
+top:-5px; left:-5px; right:-5px; bottom:-5px;
+z-index: -1;;
+background: linear-gradient(#02b2e8 0%,#03d8f9 15%,
+    #b5e765 30%, #f4d06f 60%,
+    #ff8243 80%,#f04f39 100%);
+filter: blur(8px);
+opacity: 0;
+transition: opacity 0.3s ease;
+
+}
+.aboutme div.icons:hover:after{
+opacity: 0.7;
+}
+
+.aboutme div.icons a{ /* adding a link to my imag messed it up so im putting this here*/
+display: block;
+width: 205px;
+height: 200px;
+}
+.aboutme div.icons a img{ 
+width: 100%;
+height: 100%;
+  object-fit: cover;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 .aboutme div.text {
   grid-area: text;
@@ -109,8 +166,9 @@ height: auto;
 
 p{
 font-family:Oceanside;
+color: #ff8243;
 }
-h1{font-size: 1.6em; 
+h1{font-size: 25px; 
     font-weight: bold;
     text-shadow: /* what this will do is basically give it a cool stroke*/
         -2px -2px 0 #07104a,  
@@ -119,20 +177,82 @@ h1{font-size: 1.6em;
          2px  2px 0 #07104a,
 
          0px  0px 0px rgba(0,0,0,0.6); 
-         /* ^im pretty sure this gives it a gradient. 
+         /* ^im pretty sure this gives it a shadow. 
          which i dont want. 
          and ive tried to get rid of it 
          but it breaks everything above. 
          which i also dont want. 
          so i guess its staying for now*/
 }
+h2{font-size: 25px;
+    color: #ff8243;
+    font-weight: bold;
+    text-shadow: 
+        -2px -2px 0 #07104a,  
+         2px -2px 0 #07104a,
+        -2px  2px 0 #07104a,
+         2px  2px 0 #07104a,
+
+         0px  0px 0px rgba(0,0,0,0.6); 
+}
+h3{font-size: 25px;
+    color: #ff8243;
+    font-weight: bold;
+    text-shadow: 
+        -2px -2px 0 #07104a,  
+         2px -2px 0 #07104a,
+        -2px  2px 0 #07104a,
+         2px  2px 0 #07104a,
+
+         0px  0px 0px rgba(0,0,0,0.6); 
+}
+h4{font-size: 25px;
+    color: #ff8243;
+    font-weight: bold;
+    text-shadow: 
+        -2px -2px 0 #07104a,  
+         2px -2px 0 #07104a,
+        -2px  2px 0 #07104a,
+         2px  2px 0 #07104a,
+
+         0px  0px 0px rgba(0,0,0,0.6); 
+}
+h5{font-size: 25px;
+    color: #ff8243;
+    font-weight: bold;
+    text-shadow: 
+        -2px -2px 0 #07104a,  
+         2px -2px 0 #07104a,
+        -2px  2px 0 #07104a,
+         2px  2px 0 #07104a,
+
+         0px  0px 0px rgba(0,0,0,0.6); 
+}
+a{
+  color:inherit;
+  text-decoration: none;
+}
+a:hover{
+  color:#f5ecd2;
+}
+
+a:visited {
+  color:#f4d06f;
+}
+
+.buttons-row{
+  display:flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
 body {
     background-color: black;
     background-image: url('https://i.pinimg.com/736x/87/b7/14/87b714e94631edb18c7d390d733c70d6.jpg'); /* this is the background foto */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     font-family: 'Oceanside', 'Courier New', Courier, monospace;
     color: #0c2420; 
     margin: 0;
@@ -188,32 +308,234 @@ body {
 		<body>
 	<div class="main" >
 <!-- img banner here -->
- <div class="top-master-banner"></div><br>
+ <div class="top-master-banner"><img src="images/banners/"></div><br>
 
 <!-- striped divider -->
  <div class="striped-divider"></div>
 
  <div class="aboutme">
-  <div class="icons"><img src="images/icons/Untitled363_20260621192129.png" alt="tansytansy"></div>
-  <div class="names"><h1>myxterii</h1>also known as <em>mango</em><br><br>
+  <div class="icons"><a href="https://toyhou.se/40767817.tansy-tansygale"><img src="images/icons/tansytansy.jpeg" alt="tansytansy" width="205px" height="auto"></a></div>
+  <div class="names"><h1>myxterii</h1>also known as <em>mango</em><br><br> <!-- "here" should not be permanently yellow. what? stop!!!
+    update. so turns out this is only true when i check out the index file. the live viewer works how i expect it to-->
   
 <div class="wiki-quote-container">
   <p class="wiki-quote-text">I like apples and bananas.</p>
-  <p class="wiki-quote-author"><href a="https://toyhou.se/~world/254891.knf2/page/192863.romeo-grace">- Romeo Grace, 7/31/26<a></p>
+  <p class="wiki-quote-author"><a href="https://toyhou.se/~world/254891.knf2/page/192863.romeo-grace">- Romeo Grace, 7/31/26<a></p>
 </div>
   </div>
 
-  <div class="text"><p>links</p><br>
- 
-<img  src=""></img>
+  <div class="text"><h2>links</h2><br> 
+ <p>link1<br>link2<br>link3</p>
+<img src=""></img> 
   
   </div>
 
  </div>
-
+<p>hallo<br>i like drawing and writing. check out my projects <a href="https://toyhou.se/myxterii">here </a><p style="font-size: small;">won't work on school laptops sory</p><br>
 
   <div class="striped-divider"></div>
-	</div>
+
+<!-- SCARY SCARY SCARY SCARY -->
+<div class="dropdown-container">
+
+  <div class="dropdown-item">
+    <button class="tab-btn" onclick="toggleDropdown(0)">featured characters</button>
+  </div>
   
+
+  <div class="dropdown-item">
+    <button class="tab-btn" onclick="toggleDropdown(1)">commission info</button>
+  </div>
+  
+ 
+  <div class="dropdown-item">
+    <button class="tab-btn" onclick="toggleDropdown(2)">playlist</button>
+  </div>
+
+<!-- these are the contents for the buttons -->
+  <div id="dropdown-content-panel" class="content-panel">
+
+    <div class="panel-content hidden">
+      <h3>featured characters</h3>
+      <p>things to add:<br>
+        maybe: kylie<br>
+        definitely: tansy-tansygale, K-7
+        i want a different font for K-7's section maybe
+      </p>
+      <div style="height: 300px; background: #2f1d6b; margin-top: 10px; padding: 10px;">this is where they'll be</div>
+    </div>
+
+
+    <div class="panel-content hidden">
+      <h4>commission info</h4>
+      <p>uuuuurgg AHH AHH AHH AHHsorry ill add mroe later</p>
+      <div style="height: 300px; background: #2f1d6b; margin-top: 10px; padding: 10px;">SICK AND TIRED</div>
+    </div>
+
+    <div class="panel-content hidden">
+      <h5>playlist</h5>
+      <p>what do i want to add here.. umm media. and audio src whatevers</p>
+      <div style="height: 300px; background: #2f1d6b; margin-top: 10px; padding: 10px;">flagpole sitta</div>
+    </div>
+  </div>
+</div>
+
+
+	</div> <!-- this is where main ends-->
+<style>
+
+.dropdown-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 100%;
+  max-width: 800px; 
+  margin: 50px auto;
+  font-family: Oceanside;
+}
+
+.tab-btn {
+  width: 100%;
+  padding: 12px 5px;
+  background-color: #f5ecd2; 
+  color: #ff8243;
+  border: 2px solid #ff8243;
+  border-image: linear-gradient(#02b2e8 0%,#03d8f9 15%,
+    #b5e765 30%, #f4d06f 60%,
+    #ff8243 80%,#f04f39 100%) 4; 
+  font-weight: bold;
+  font-family: 'Oceanside', 'Courier New', Courier, monospace;
+  cursor: pointer;
+  text-align: center;
+  text-transform: lowercase;
+  
+  box-shadow: 4px 4px 0px 0px #ff8243; 
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.tab-btn:active, .tab-btn.active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #ff8243;
+}
+
+.content-panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  grid-column: span 3; 
+  width: 100%;
+  box-sizing: border-box;
+  
+  margin-top: 8px; 
+  
+
+  max-height: 0px; 
+  overflow-y: hidden;
+  opacity: 0;
+  padding: 0px 20px; 
+  
+
+  background-color: #231552; 
+  color: #ff8243;
+  border: 0px solid #ff8243;
+
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.2s ease, 
+              padding 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.2s ease;
+}
+
+
+.content-panel.open {
+  max-height: 250px; 
+  overflow-y: auto; 
+  opacity: 1;
+  padding: 20px;
+  border: 3px solid #ff8243;
+  border-image: linear-gradient(#f04f39 0%,#ff8243 15%,
+    #f4976f 30%, #e7d465 60%,
+    #f9e803 80%,#f8e008 100%) 4;
+  box-shadow: 6px 6px 0px 0px #ff8243; 
+}
+
+
+.panel-content {
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+
+.panel-content.active-content {
+  display: block;
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.content-panel::-webkit-scrollbar {
+  width: 15px;
+}
+.content-panel::-webkit-scrollbar-track {
+  width: 1px;
+  background: #170d37;
+}
+.content-panel::-webkit-scrollbar-thumb {
+  
+    background: repeating-linear-gradient(
+        45deg,
+        #ff8243,
+        #ff8243, 12px,
+        #f4d06f 12px,
+        #f4d06f 24px
+    );
+    background-size: 34px 34px;
+    animation: moveStripes 4.0s linear infinite;
+  border: 3px solid #170d37; /* why isnt this animated..
+  searched online and apparently mozilla firefox doesnt support scrollbar animations? :o(*/
+}
+
+</style>
+  <script>
+    //okay. use // for comments in javascript.
+    //DONT touch anything here UNLESS ABSOLUTELY NECESSARY/. I donr kno what ANY of this do.
+    //but it working. so it ok
+function toggleDropdown(index) {
+  const panel = document.getElementById('dropdown-content-panel');
+  const contents = document.querySelectorAll('.panel-content');
+  const buttons = document.querySelectorAll('.tab-btn');
+  
+
+  if (panel.classList.contains('open') && contents[index].classList.contains('active-content')) {
+    panel.classList.remove('open');
+    buttons[index].classList.remove('active');
+    
+  
+    setTimeout(() => {
+      contents[index].classList.add('hidden');
+      contents[index].classList.remove('active-content');
+    }, 200);
+    return;
+  }
+  
+  contents.forEach(content => {
+    content.classList.add('hidden');
+    content.classList.remove('active-content');
+  });
+  buttons.forEach(btn => btn.classList.remove('active'));
+  
+  contents[index].classList.remove('hidden');
+  contents[index].classList.add('active-content');
+  buttons[index].classList.add('active');
+  
+  panel.classList.add('open');
+  
+  panel.scrollTop = 0;
+}
+
+  </script>
 		</body>
 </html>
