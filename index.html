@@ -45,7 +45,7 @@ display: grid;
 grid-template-areas:
 "icons names text links";
 grid-template-rows: auto 1fr;
-grid-template-columns: 1fr 2fr 0.5frfr;
+grid-template-columns: 1fr 3fr;
 gap: 10px;
 height: auto; /* i dont know how these work. but it looks okay right now.
 so im not touching it. hope this doesnt cause any problems in the future*/
@@ -301,110 +301,16 @@ body {
     height: 100%;
     object-fit: cover;
 }/*big banner*/
-</style>
 
+/* so turns out i just cant do that. which kind of sucks. whatever dude*/
 
-	</head>
-		<body>
-	<div class="main" >
-<!-- img banner here -->
- <div class="top-master-banner"><img src="images/banners/"></div><br>
-
-<!-- striped divider -->
- <div class="striped-divider"></div>
-
- <div class="aboutme">
-  <div class="icons"><a href="https://toyhou.se/40767817.tansy-tansygale"><img src="images/icons/tansytansy.jpeg" alt="tansytansy" width="205px" height="auto"></a></div>
-  <div class="names"><h1>myxterii</h1>also known as <em>mango</em><br><br> <!-- "here" should not be permanently yellow. what? stop!!!
-    update. so turns out this is only true when i check out the index file. the live viewer works how i expect it to-->
-  
-<div class="wiki-quote-container">
-  <p class="wiki-quote-text">I like apples and bananas.</p>
-  <p class="wiki-quote-author"><a href="https://toyhou.se/~world/254891.knf2/page/192863.romeo-grace">- Romeo Grace, 7/31/26<a></p>
-</div>
-  </div>
-
-  <div class="text"><h2>links</h2><br> 
- <p>link1<br>link2<br>link3</p>
-<img src=""></img> 
-  
-  </div>
-
- </div>
-<p>hallo<br>i like drawing and writing. check out my projects <a href="https://toyhou.se/myxterii">here </a><p style="font-size: small;">won't work on school laptops sory</p><br>
-
-  <div class="striped-divider"></div>
-
-<!-- SCARY SCARY SCARY SCARY -->
-<div class="dropdown-container">
-
-  <div class="dropdown-item">
-    <button class="tab-btn" onclick="toggleDropdown(0)">featured characters</button>
-  </div>
-  
-
-  <div class="dropdown-item">
-    <button class="tab-btn" onclick="toggleDropdown(1)">commission info</button>
-  </div>
-  
- 
-  <div class="dropdown-item">
-    <button class="tab-btn" onclick="toggleDropdown(2)">playlist</button>
-  </div>
-
-<!-- these are the contents for the buttons -->
-  <div id="dropdown-content-panel" class="content-panel">
-
-    <div class="panel-content hidden">
-      <h3>featured characters</h3>
-      <p>things to add:<br>
-        maybe: kylie<br>
-        definitely: tansy-tansygale, K-7
-        i want a different font for K-7's section maybe
-
-<!-- im just going to start adding style tags where they are 
-like near the relevant sections. this style tag is for the character pages and stuff -->
-	<style>
 		.characterpage{
 		min-width: 200px;
 		min-height: 200px;
     max-height: 80%;
     max-width: 80%;
 		background-color: red;
-    background-position: center;
 		}	
-
-	</style>
-	
-      </p>
-      <div style="height: 300px; background: #2f1d6b; margin-top: 10px; padding: 10px;">this is where they'll be<br>
-
-<div class="characterpage">
-		<div class="7txt">
-
-	</div>
-
-</div>
-    </div>
-
-
-    <div class="panel-content hidden">
-      <h4>commission info</h4>
-      <p>uuuuurgg AHH AHH AHH AHHsorry ill add mroe later</p>
-      <div style="height: 300px; background: #2f1d6b; margin-top: 10px; padding: 10px;">SICK AND TIRED</div>
-    </div>
-
-    <div class="panel-content hidden">
-      <h5>playlist</h5>
-      <p>what do i want to add here.. umm media. and audio src whatevers</p>
-      <div style="height: 300px; background: #2f1d6b; margin-top: 10px; padding: 10px;">flagpole sitta</div>
-    </div>
-  </div>
-</div>
-
-
-	</div> <!-- this is where main ends-->
-<style>
 
 .dropdown-container {
   position: relative;
@@ -521,6 +427,102 @@ like near the relevant sections. this style tag is for the character pages and s
 }
 
 </style>
+
+
+	</head>
+		<body>
+	<div class="main" >
+<!-- img banner here -->
+ <div class="top-master-banner"><img src="images/banners/" alt="banner"></div><br>
+
+<!-- striped divider -->
+ <div class="striped-divider"></div>
+
+ <div class="aboutme">
+  <div class="icons"><a href="https://toyhou.se/40767817.tansy-tansygale"><img src="images/icons/tansytansy.jpeg" alt="tansytansy"></a></div>
+  <div class="names"><h1>myxterii</h1>also known as <em>mango</em><br><br> <!-- "here" should not be permanently yellow. what? stop!!!
+    update. so turns out this is only true when i check out the index file. the live viewer works how i expect it to-->
+  
+<div class="wiki-quote-container">
+  <p class="wiki-quote-text">I like apples and bananas.</p>
+  <p class="wiki-quote-author"><a href="https://toyhou.se/~world/254891.knf2/page/192863.romeo-grace">- Romeo Grace, 7/31/26</a></p>
+</div>
+  </div>
+
+  <div class="text"><h2>links</h2><br> 
+ <p>
+  link1<br>
+  link2<br>
+  link3<br>
+  <a href="https://colortraks.net/"><br>inspiring website</a>
+</p>
+  
+  </div>
+
+ </div>
+<p>hallo<br>i like drawing and writing. check out my projects <a href="https://toyhou.se/myxterii">here </a><p style="font-size: small;">won't work on school laptops sory</p><br>
+
+  <div class="striped-divider"></div>
+
+<!-- SCARY SCARY SCARY SCARY -->
+<div class="dropdown-container">
+
+  <div class="dropdown-item">
+    <button class="tab-btn" onclick="toggleDropdown(0)">featured characters</button>
+  </div>
+  
+
+  <div class="dropdown-item">
+    <button class="tab-btn" onclick="toggleDropdown(1)">commission info</button>
+  </div>
+  
+ 
+  <div class="dropdown-item">
+    <button class="tab-btn" onclick="toggleDropdown(2)">playlist</button>
+  </div>
+
+<!-- these are the contents for the buttons -->
+  <div id="dropdown-content-panel" class="content-panel">
+
+    <div class="panel-content hidden">
+      <h3>featured characters</h3>
+      <p>things to add:<br>
+        maybe: kylie<br>
+        definitely: tansy-tansygale, K-7
+        i want a different font for K-7's section maybe</p>
+
+	
+      <div style="height: 300px; background: #2f1d6b; margin-top: 10px; padding: 10px;">this is where they'll be
+
+<div class="characterpage">
+		<div class="7txt">
+
+		
+		</div>
+
+	</div>
+
+
+</div>
+    </div>
+
+
+    <div class="panel-content hidden">
+      <h4>commission info</h4>
+      <p>uuuuurgg AHH AHH AHH AHHsorry ill add mroe later</p>
+      <div style="height: 300px; background: #2f1d6b; margin-top: 10px; padding: 10px;">SICK AND TIRED</div>
+    </div>
+
+    <div class="panel-content hidden">
+      <h5>playlist</h5>
+      <p>what do i want to add here.. umm media. and audio src whatevers</p>
+      <div style="height: 300px; background: #2f1d6b; margin-top: 10px; padding: 10px;">flagpole sitta</div>
+    </div>
+  </div>
+</div>
+
+
+	</div> <!-- this is where main ends-->
 
   <script>
     //okay. use // for comments in javascript.
