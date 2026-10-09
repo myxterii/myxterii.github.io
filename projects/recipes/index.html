@@ -14,7 +14,7 @@ body{
 
     @font-face{
         font-family: 'ClairDeLune';
-        src: url('fonts/Dkclairdelune-Yax8.ttf') format('truetype');
+        src: url('/fonts/Dkclairdelune-Yax8.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
     }
@@ -23,11 +23,20 @@ body{
     color: white;
 }
 
+.test {
+    max-width: 80%;
+    height: 150px;
+    background-color: lemonchiffon;
+    align-content: center; /* why isnt this working?  */
+}
 </style>
     </head>
 <body>
 
     <header>
+        <div class="test">
+
+        </div>
         <p>this should be in the header?</p>
     </header>
     <main>
