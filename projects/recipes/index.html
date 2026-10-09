@@ -5,15 +5,22 @@
     <script src="../../validate.js"></script>
 <style>
 
-body {
-    background-image: linear-gradient(to bottom, red, blue);
+body{
+    background-image: linear-gradient(to bottom, 
+    #342958 10%, #392f5a 20%, #3b2e8c 70%);
     background-repeat: no-repeat;
-    color: #ff8243;
-    border: 4px solid black;
+    border: 3px solid black;
 }
 
-.main {
-    background-image: linear-gradient(to bottom, red, blue);
+    @font-face{
+        font-family: 'ClairDeLune';
+        src: url('fonts/Dkclairdelune-Yax8.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    p{
+    color: white;
 }
 
 </style>
@@ -21,15 +28,14 @@ body {
 <body>
 
     <header>
-
+        <p>this should be in the header?</p>
     </header>
-
     <main>
-
+        <p>this should be in the main? </p>
     </main>
 
     <footer>
-
+        <p>this should be in the footer! </p>
     </footer>
 </body>
 
