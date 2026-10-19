@@ -13,7 +13,9 @@ body{
     border: 3px solid black;
     font-family: ClairDeLune;
 }
-
+p{
+    font-size: 25px;
+}
     @font-face{
         font-family: 'ClairDeLune';
         src: url('fonts/Dkclairdelune-Yax8.ttf') format('truetype');
@@ -51,8 +53,18 @@ body{
     color: #ff8243;
 }
 
-.profile {
-    
+h1, h3 {
+    font-size: 30px;
+    font-style: italic;
+    color: #ff8243;
+    font-family: 'ClairDeLune';
+}
+
+h2 {
+    font-size: 30px;
+    font-style: italic;
+    color: white;
+    font-family: 'ClairDeLune';
 }
 
 .striped-divider {
@@ -74,17 +86,23 @@ body{
 
 .mainG {
     display: grid;
-    grid-template-columns: 1fr 2fr; 
-    gap: 15px;
+    grid-template-columns: 1fr 2fr 2fr; 
     width: 100%;
 }
 
 .Gleft {
-    padding: 15px
+    padding: 12px;
+    color: white;
 }
 
 .Gright {
-    padding: 15px;
+    padding: 12px;
+    color: white;
+}
+
+.Grighter {
+    padding: 12px;
+    color: white;
 }
 
 
@@ -96,7 +114,7 @@ body{
         <div class="striped-divider"></div>
         
         <div class="header">
-            <p>Taam's Family Recipe</p>
+            <h1>Taam's Family Recipe</h1>
         </div>
 
         <div class="striped-divider"></div>
@@ -114,12 +132,41 @@ body{
     <div class="mainG">
     
         <div class="Gleft">
-        <img src="images/turkish.jpg">
+
+            <img src="images/turkish.jpg" alt="turkyfish" width="250px" height="auto">
         </div>
-  
+
         <div class="Gright">
         <h2>Turkish-Style Marinated Salmon</h2>
-        <p>test</p>
+        <p>Ingredients:<br>
+
+                <ul>
+                    <li>Salmon</li>
+                    <li>Olive Oil</li>
+                    <li>Red Pepper Paste</li>
+                        <ul>
+                            <li>Aleppo pepper</li>
+                            <li>Oregano</li>
+                            <li>Smoked paprika</li>
+                        </ul>
+                    <li>Lemon</li>
+                    <li>Garlic</li>
+                    <li>Salt</li>
+                    <li>Fresh Herbs</li>
+                </ul>
+
+        </p>
+        </div>
+
+        <div class="Grighter">
+        <p>Instructions:<br>
+        <p style="font-size: 12px;">
+            Remember to marinate the salmon!</p>
+                <ol>
+                    
+                </ol>
+
+        </p>
         </div>
     
     </div>
@@ -130,7 +177,7 @@ body{
         <div class="striped-divider"></div>
         
         <div class="header">
-            <p>This is a footer.</p>
+            <h3>This is a footer.</h3>
         </div>
 
         <div class="striped-divider"></div>
