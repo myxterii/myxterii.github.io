@@ -6,38 +6,47 @@
 <style>
 
 body{
+    background-color: black;
     background-image: linear-gradient(to bottom, 
     #342958 10%, #392f5a 20%, #3b2e8c 70%);
     background-repeat: no-repeat;
     border: 3px solid black;
+    font-family: ClairDeLune;
 }
 
     @font-face{
         font-family: 'ClairDeLune';
-        src: url('/fonts/Dkclairdelune-Yax8.ttf') format('truetype');
+        src: url('fonts/Dkclairdelune-Yax8.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
     }
-
+     
+    @font-face{
+        font-family: 'ClairDeLune';
+        src: url('fonts/Dkclairdelune-Yax8.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
     p{
     color: white;
+    font-family: 'ClairDeLune';
 }
 
-.test {
+.header {
     max-width: 80%;
     height: 150px;
     background-color: lemonchiffon;
     align-content: center; /* why isnt this working?  */
+    font-family: 'ClairDeLune';
 }
 </style>
     </head>
 <body>
 
     <header>
-        <div class="test">
-
-        </div>
-        <p>this should be in the header?</p>
+        <div class="header">this <strong>should</strong> 
+            be in the header?</div>
     </header>
     <main>
         <p>this should be in the main? </p>
