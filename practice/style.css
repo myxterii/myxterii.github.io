@@ -1,0 +1,17 @@
+body{
+    background-color: lemonchiffon;
+}
+
+table, th, tr, td{
+    border: 1px black dashed;
+    border-collapse: collapse;
+    background-color: linear-gradient(to bottom red, blue);
+}
+
+.big{
+    font-size: 4em;
+}
+
+#six-seven{
+    font-size: 0.67em;
+}
