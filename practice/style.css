@@ -15,3 +15,19 @@ table, th, tr, td{
 #six-seven{
     font-size: 0.67em;
 }
+
+nav ul {
+    display: flex;
+    list-style: none; 
+    padding: 10px;       
+    margin: 0;
+    justify-content: space-evenly;
+}
+
+nav li {
+    display: flex;  
+}
+
+nav a:hover{
+    color: red;
+}
