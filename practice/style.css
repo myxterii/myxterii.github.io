@@ -31,3 +31,20 @@ nav li {
 nav a:hover{
     color: red;
 }
+nav a{
+    color: black;
+    text-decoration: none;
+}
+
+nav li {
+    color: black;
+    display:flex;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, pink, papayawhip);
+    min-width: 100px;
+    margin: 10px;
+    padding: 10px;
+    border: 2px black solid;
+    border-radius: 10px;
+    text-decoration: none;
+}
