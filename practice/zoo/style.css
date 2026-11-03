@@ -1,19 +1,26 @@
-body{
-    background-color: lemonchiffon;
+body{ 
+    background-image: 
+    linear-gradient(to bottom, black, navy);
 }
 
 table, th, tr, td{
     border: 1px black dashed;
     border-collapse: collapse;
-    background-color: linear-gradient(to bottom red, blue);
+    background-image: linear-gradient(to bottom,  pink, papayawhip);
 }
 
-.big{
-    font-size: 4em;
+header, h2{
+    color: pink;
+    text-align: center;
 }
 
-#six-seven{
-    font-size: 0.67em;
+header, h2{
+    padding: 10px;
+    background-image: linear-gradient(to bottom, navy, navy);
+}
+
+h2{
+    margin: 0px;
 }
 
 nav ul {
@@ -23,6 +30,7 @@ nav ul {
     margin: 0;
     justify-content: space-evenly;
 }
+
 
 nav li {
     display: flex;  
@@ -46,5 +54,40 @@ nav li {
     padding: 10px;
     border: 2px black solid;
     border-radius: 10px;
-    text-decoration: none;
+    text-decoration: none;pink
 }
+
+p{
+    color:pink;
+}
+
+footer{
+    color: black;
+}
+
+.striped-divider
+    {
+    width: 100%;
+    height: 24px; 
+    border: 2px solid navy;
+    border-radius: 0; 
+    box-sizing: border-box;
+    background: repeating-linear-gradient(
+        45deg,
+        pink,
+        pink 12px,
+        lemonchiffon 12px,
+        lemonchiffon 24px
+    );
+  background-size: 34px 34px;
+    animation: moveStripes 4.0s linear infinite; 
+}
+        @keyframes moveStripes {
+            from {
+                background-position: 0 0;
+                }
+            to {
+                background-position: 34px 0;
+                }
+            } 
+ /* moving stripes  */
