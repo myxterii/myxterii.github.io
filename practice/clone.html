@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Page</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, sans-serif; max-width: 900px; margin: 0 auto; }
+    img { display: block; width: 100%; background: #ddd; }
+    h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+    p { color: #555; line-height: 1.6; margin-bottom: 0.5rem; }
+    button { padding: 0.5rem 1.5rem; border: none; border-radius: 5px; background: #333; color: #fff; cursor: pointer; }
+    nav { display: flex; gap: 1rem; }
+    nav a { text-decoration: none; color: inherit; }
+    /* Layout */
+    .c1 {
+      display: grid;
+      grid:
+        'info  .    nav1' 1fr
+        'head2 nav2 nav2' auto
+        / 2fr 1fr 1fr;
+      padding: 1rem;
+    }
+    .c2 {
+      grid-area: nav1;
+    }
+    .c3 {
+      grid-area: head2;
+    }
+    .c4 {
+      grid-area: nav2;
+    }
+    .c5 {
+      padding: 1rem;
+    }
+    .c6 {
+      aspect-ratio: 4 / 3;
+    }
+    .c7 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem;
+    }
+    .c8 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 2rem;
+    }
+    .c9 {
+      width: 65%;
+      aspect-ratio: 4 / 3;
+    }
+    .c10 {
+      width: 65%;
+      aspect-ratio: 4 / 3;
+    }
+    .c11 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem;
+    }
+    .c12 {
+      display: inline-block;
+      vertical-align: middle;
+      width: 30%;
+      aspect-ratio: 4 / 3;
+    }
+    .c13 {
+      display: inline-block;
+      vertical-align: middle;
+      width: 30%;
+      aspect-ratio: 4 / 3;
+    }
+    .c14 {
+      display: inline-block;
+      vertical-align: middle;
+      width: 30%;
+      aspect-ratio: 4 / 3;
+    }
+    .c15 {
+      padding: 2rem;
+    }
+    .c16 {
+      text-align: center;
+    }
+    .c17 {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+    }
+    .c18 {
+      display: grid;
+      grid:
+        'leftA   rightA' 4fr
+        'button1 rightA' 1fr
+        'leftB   rightB' 4fr
+        'leftB   button2' 1fr
+        'leftC   rightC' 4fr
+        'button3 rightC' 1fr
+        / 1fr 1fr;
+      padding: 2rem;
+    }
+    .c19 {
+      grid-area: leftA;
+      width: 65%;
+      aspect-ratio: 4 / 3;
+    }
+    .c20 {
+      grid-area: rightA;
+    }
+    .c21 {
+      grid-area: button1;
+    }
+    .c22 {
+      grid-area: leftB;
+    }
+    .c23 {
+      grid-area: rightB;
+      width: 65%;
+      aspect-ratio: 4 / 3;
+    }
+    .c24 {
+      grid-area: button2;
+    }
+    .c25 {
+      grid-area: leftC;
+      width: 65%;
+      aspect-ratio: 4 / 3;
+    }
+    .c26 {
+      grid-area: rightC;
+    }
+    .c27 {
+      grid-area: button3;
+    }
+    .c28 {
+      padding: 0.5rem;
+    }
+    .c29 {
+      display: grid;
+      grid:
+        'contact infoA   infoB   shop' auto
+        'contact infoAC  infoAB  shop' auto
+        'contact infoAC  infoAB  shop' auto
+        'contact socials socials socials' auto
+        / 1fr 1fr 1fr 1fr;
+      padding: 2rem;
+    }
+    .c30 {
+      grid-area: contact;
+    }
+    .c31 {
+      grid-area: infoA;
+    }
+    .c32 {
+      grid-area: infoB;
+    }
+    .c33 {
+      grid-area: infoAC;
+    }
+    .c34 {
+      grid-area: infoAB;
+    }
+    .c35 {
+      grid-area: shop;
+    }
+  </style>
+</head>
+<body>
+<header class="c1">
+  <h1>Page Heading</h1>
+  <nav class="c2">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Work</a>
+    <a href="#">Contact</a>
+  </nav>
+  <h2 class="c3">Section Heading</h2>
+  <nav class="c4">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Work</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+<main class="c5">
+  <img src="placeholder.jpg" alt="" class="c6">
+  <button>Click me</button>
+  <section class="c7">
+    <button>Click me</button>
+    <button>Click me</button>
+    <button>Click me</button>
+    <button>Click me</button>
+    <button>Click me</button>
+    <button>Click me</button>
+  </section>
+  <section class="c8">
+    <img src="placeholder.jpg" alt="" class="c9">
+    <img src="placeholder.jpg" alt="" class="c10">
+    <button>Click me</button>
+    <button>Click me</button>
+  </section>
+  <h3>Sub-heading</h3>
+  <section class="c11">
+    <img src="placeholder.jpg" alt="" class="c12">
+    <img src="placeholder.jpg" alt="" class="c13">
+    <img src="placeholder.jpg" alt="" class="c14">
+  </section>
+</main>
+<button>Click me</button>
+<section class="c15">
+  <h3 class="c16">Sub-heading</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <div class="c17">
+    <button>Click me</button>
+    <button>Click me</button>
+    <button>Click me</button>
+    <button>Click me</button>
+    <button>Click me</button>
+  </div>
+</section>
+<section class="c18">
+  <img src="placeholder.jpg" alt="" class="c19">
+  <p class="c20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <button class="c21">Click me</button>
+  <p class="c22">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <img src="placeholder.jpg" alt="" class="c23">
+  <button class="c24">Click me</button>
+  <img src="placeholder.jpg" alt="" class="c25">
+  <p class="c26">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <button class="c27">Click me</button>
+</section>
+<footer class="c28">
+  <section class="c29">
+    <p class="c30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <h3 class="c31">Sub-heading</h3>
+    <h3 class="c32">Sub-heading</h3>
+    <p class="c33">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p class="c34">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <button class="c35">Click me</button>
+  </section>
+</footer>
+  <script>
+  (function() {
+    var s = document.createElement("script");
+    s.src = "https://cdn.jsdelivr.net/gh/gracehoppercenter/validate@1.0.5/validate.js";
+    s.async = false;
+    document.head.appendChild(s);
+  })();
+  </script>
+</body>
+</html>
