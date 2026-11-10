@@ -23,7 +23,7 @@
               border: 8px solid red;
             }
             .heart {
-              height: 20vh; /* adjust to control the size */
+              height: 250px; /* adjust to control the size */
               aspect-ratio: 1;
               --_m: radial-gradient(#000 69%,#0000 70%) 84.5%/50%;
               -webkit-mask-box-image: var(--_m);
@@ -31,6 +31,7 @@
               clip-path: polygon(-41% 0,50% 91%, 141% 0);
               background-color: chocolate;
               margin: auto;
+              padding: 40px;
             }
             /* fallback until better support for mask-border */
             @supports not (-webkit-mask-box-image: var(--_m)) { 
@@ -41,10 +42,21 @@
                  conic-gradient(#000 0 0) bottom/100% 50% no-repeat;
               }
             }
-            #chocolateheart{
-                grid-column-start: 3;
-                grid-row-start:2;
+            #longchoc {
+                grid-column-start: 2;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                width: 100%;
+                height: 100%;
+                background-color: brown;
+                border-radius: 15px;
             }
+            #chocolateheart{
+                grid-column-end: 4;
+                grid-row-start:2;
+                border-radius: 3px;
+            }
+            
             .lilbits{
                 grid-column-start: 1;
                 grid-row-start: 1;
@@ -52,6 +64,7 @@
               grid-template-columns: 1fr 1fr 1fr;
               grid-template-rows: 1fr 1fr 1fr;
             }
+
             #mnm{
                 grid-column-start:1;
                 grid-row-start:1;
@@ -64,6 +77,142 @@
                 place-items: center;
                 font-size: 2em;
             }
+            #blu{
+                grid-column-start:2;
+                grid-row-start:1;
+                width:10vh;
+                height:10vh;
+                background-color:blue;
+                border-radius:50%;
+                margin: auto;
+                display: grid;
+                place-items: center;
+                font-size: 2em;
+            } 
+            #gre{
+                grid-column-start:3;
+                grid-row-start:1;
+                width:10vh;
+                height:10vh;
+                background-color:green;
+                border-radius:50%;
+                margin: auto;
+                display: grid;
+                place-items: center;
+                font-size: 2em;
+            }
+
+            #yel{
+                padding: 10px;
+                background-clip: content-box;
+                grid-column-start:1;
+                grid-row-start:2;
+                width:10vh;
+                height:10vh;
+                background-color:yellow;
+                border-radius:50%;
+                margin: auto;
+                display: grid;
+                place-items: center;
+                font-size: 2em;
+            }
+            #pur{
+                padding: 10px;
+                background-clip: content-box;
+                grid-column-start:2;
+                grid-row-start:2;
+                width:10vh;
+                height:10vh;
+                background-color:purple;
+                border-radius:50%;
+                margin: auto;
+                display: grid;
+                place-items: center;
+                font-size: 2em;
+            }
+            #cya{
+                padding: 10px;
+                background-clip: content-box;
+                grid-column-start:3;
+                grid-row-start:2;
+                width:10vh;
+                height:10vh;
+                background-color:cyan;
+                border-radius:50%;
+                margin: auto;
+                display: grid;
+                place-items: center;
+                font-size: 2em;
+            }
+
+            #choclittlebits
+            {
+                padding: 10px;
+                background-clip: content-box;
+                grid-column-end: 4;
+                grid-row-end: 6;
+                grid-row-start: 4;
+                color: black;
+                display: flex;
+                justify-content: end;
+            }
+            #chob1
+            {   
+                border: 10px inset chocolate;
+                border-radius: 10px;
+                background-color: lemonchiffon;
+                width: 42%; 
+                height: 80%;
+                float: left;
+            }
+            #chob2
+            {    
+                border: 10px inset chocolate;
+                border-radius: 10px;
+                background-color: lemonchiffon;
+                width: 42%; 
+                height: 80%;
+                float: left;
+            }
+
+            #jim{
+                grid-column-start:1;
+                grid-row-start:3;
+                width:100%;
+                height:10vh;
+                background-color: #ff8243;
+                border-radius:10%;
+                margin: auto;
+                display: grid;
+                place-items: center;
+                font-size: 2em;
+            }
+
+            #jim2 {
+                grid-column-start:2;
+                grid-row-start:3;
+                width: 96%;
+                height:10vh;
+                background-color: #ff8243;
+                border-radius:10%;
+                margin: auto;
+                display: grid;
+                place-items: center;
+                font-size: 2em;
+            }
+ #jim3 {
+                grid-column-start:3;
+                grid-row-start:3;
+                width: 96%;
+                height:10vh;
+                background-color: #ff8243;
+                border-radius:10%;
+                margin: auto;
+                display: grid;
+                place-items: center;
+                font-size: 2em;
+            }
+
         </style>
     </head>
     <body>
@@ -74,11 +223,40 @@
                 <div id="mnm">
                 m
                 </div>
-                <!-- TODO: Add some more divs here, and style them
-                    to fill in the 'lilbits' part of the chocolate box -->
+                <div id="blu">
+                m
+                </div> 
+                <div id="gre">
+                m
+                </div>
+                <div id="pur">
+                m
+                </div>
+                <div id="yel">
+                m
+                </div>
+                <div id="cya">
+                m
+                </div>
+                
+                <div id="jim"></div>
+                <div id="jim2"></div>
+                <div id="jim3"></div>
+                <!-- TODO: done -->
             </div>
             <!-- TODO: Add some more divs here, and style them
                 to fill in the other sections of the chocolate box -->
+                <div id="longchoc"></div>
+                
+                <div id="choclittlebit">
+                
+                    <div id="chob1"></div>
+                    <div id="chob2"></div>
+                
+                </div> 
+
+
+
         </div>
     </body>
 </html> 
